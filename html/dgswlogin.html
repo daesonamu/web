@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
-    <link rel="stylesheet" href="dgswlogin.css">
+    
+    <link rel="icon" type="image/png" href="../img/대소나무-Photoroom (1).jpg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/dgswlogin.css">
 </head>
 <body>
-    <div class="login-container">
-        <div class="login-form">
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal-form">
+            <button class="close-btn" onclick="closeLogin()">&times;</button>
             <h2 class="form-title">로그인</h2>
             <form id="loginForm">
                 <div class="form-group">
@@ -18,7 +23,7 @@
                         <input type="text" id="name" placeholder="아이디를 입력해주세요" required>
                     </div>
                 </div>
-                
+                                 
                 <div class="form-group">
                     <label for="password">비밀번호를 입력해주세요</label>
                     <div class="input-wrapper">
@@ -26,20 +31,18 @@
                         <input type="password" id="password" placeholder="비밀번호를 입력해주세요" required>
                     </div>
                 </div>
-                
+                                 
                 <div class="button-group">
-                    <button type="button" class="btn btn-secondary" onclick="resetForm()">초기화</button>
                     <button type="submit" class="btn btn-primary" id="submitBtn">시작하기</button>
                 </div>
             </form>
-            
+                         
             <div class="signup-link">
                 <a href="#" onclick="showSignup()">회원가입하기</a>
             </div>
         </div>
     </div>
 
-    <!-- 회원가입 모달 -->
     <div class="modal-overlay" id="signupModal">
         <div class="modal-form">
             <button class="close-btn" onclick="closeSignup()">&times;</button>
@@ -52,7 +55,7 @@
                         <input type="text" id="signup-name" placeholder="아이디를 입력해주세요" required>
                     </div>
                 </div>
-                
+                                 
                 <div class="form-group">
                     <label for="signup-email">이메일을 입력해주세요</label>
                     <div class="input-wrapper">
@@ -60,7 +63,7 @@
                         <input type="email" id="signup-email" placeholder="이메일을 입력해주세요" required>
                     </div>
                 </div>
-                
+                                 
                 <div class="form-group">
                     <label for="signup-password">비밀번호를 입력해주세요</label>
                     <div class="input-wrapper">
@@ -68,15 +71,15 @@
                         <input type="password" id="signup-password" placeholder="비밀번호를 입력해주세요" required>
                     </div>
                 </div>
-                
+                                 
                 <div class="form-group">
-                    <label for="signup-confirm">비밀번호를 다시 입력해주세요</label>
+                    <label for="signup-confirm">비밀번호를 확인</label>
                     <div class="input-wrapper">
                         <i class="fas fa-lock"></i>
                         <input type="password" id="signup-confirm" placeholder="비밀번호를 다시 입력해주세요" required>
                     </div>
                 </div>
-                
+                                 
                 <div class="button-group">
                     <button type="button" class="btn btn-secondary" onclick="closeSignup()">취소</button>
                     <button type="submit" class="btn btn-primary" id="signupSubmitBtn">가입하기</button>
@@ -85,6 +88,6 @@
         </div>
     </div>
 
-    <script src="dgswlogin.js"></script>
+    <script src="../js/dgswlogin.js"></script>
 </body>
 </html>
